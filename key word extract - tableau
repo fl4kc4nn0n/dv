@@ -1,0 +1,1 @@
+REGEXP_MATCH(LOWER([Tweet]),'adidas|nb|new balance|reebok|under armour|fila|didas')
