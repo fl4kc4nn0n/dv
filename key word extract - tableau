@@ -3,3 +3,7 @@
 
 #EXTRACT KEYWORD
 REGEXP_MATCH(LOWER([Tweet]),'adidas|nb|new balance|reebok|under armour|fila|didas')
+
+
+#EXTRACT HASHTAG
+LOWER(REGEXP_EXTRACT_NTH([Tweet],'\#([a-zA-Z0-9_]+)',1))
