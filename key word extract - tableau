@@ -1,1 +1,5 @@
+#THESE COMMANDS ARE FOR TABLEAU ONLY - THEY PERFORM A SET OF VERY BASIC FUNCTIONS
+
+
+#EXTRACT KEYWORD
 REGEXP_MATCH(LOWER([Tweet]),'adidas|nb|new balance|reebok|under armour|fila|didas')
