@@ -7,3 +7,13 @@ REGEXP_MATCH(LOWER([Tweet]),'adidas|nb|new balance|reebok|under armour|fila|dida
 
 #EXTRACT HASHTAG
 LOWER(REGEXP_EXTRACT_NTH([Tweet],'\#([a-zA-Z0-9_]+)',1))
+
+
+#BOOLEAN TRUE PERCENTAGE COUNT
+COUNT([Water and Sewer Mention]=true)/COUNT([Message])
+
+#MULTIPLE TOPIC DETECT
+IF REGEXP_MATCH([Message],'water|floo|soak') THEN "water mention"
+ELSEIF REGEXP_MATCH([Message],'road|build') THEN "structure mention"
+ELSEIF REGEXP_MATCH([Message], 'power|elec|spark') THEN "power mention"
+ELSE "no mention" END
